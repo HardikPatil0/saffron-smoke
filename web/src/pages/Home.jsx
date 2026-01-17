@@ -128,7 +128,7 @@ export default function Home() {
                   <span className="text-zinc-900 font-semibold">
                     {settings?.rating || "4.8"}
                   </span>{" "}
-                  Rating ({settings?.reviewCount || "2,400+"} Reviews)
+                  Ratings ({settings?.reviewCount || "2,400+"} Reviews)
                 </span>
               </div>
 
