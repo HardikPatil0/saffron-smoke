@@ -6,10 +6,13 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-zinc-900">
+      <ScrollToTop />
+
       <Navbar />
 
       <main className="pt-16">

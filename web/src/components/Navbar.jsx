@@ -61,10 +61,14 @@ export default function Navbar() {
             Call
           </a>
 
-          <button className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 to-orange-600 px-4 py-2 text-sm font-semibold text-black shadow-md hover:opacity-95 transition">
-            <CalendarDays size={16} />
-            Book Table
-          </button>
+        <Link
+  to="/contact"
+  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 to-orange-600 px-4 py-2 text-sm font-semibold text-black shadow-md hover:opacity-95 transition"
+>
+  <CalendarDays size={16} />
+  Book Table
+</Link>
+
         </div>
       </div>
     </header>

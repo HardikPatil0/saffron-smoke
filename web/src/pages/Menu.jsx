@@ -104,7 +104,7 @@ export default function Menu() {
         <div className="flex items-end justify-between gap-6">
           <div>
             <h2 className="lux-heading text-2xl font-bold text-zinc-900 md:text-3xl">
-              Event Menus (PDF)
+              Event Menus
             </h2>
             <p className="mt-2 text-sm text-zinc-600">
               Quick access menus for celebrations and family visits.

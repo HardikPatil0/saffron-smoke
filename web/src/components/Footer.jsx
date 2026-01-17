@@ -6,6 +6,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import useSiteSettings from "../hooks/useSiteSettings";
 
 export default function Footer() {
@@ -44,9 +45,13 @@ export default function Footer() {
               </p>
             </div>
 
-            <button className="rounded-2xl bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-zinc-800 transition">
-              Book Now
-            </button>
+          <Link
+  to="/contact"
+  className="rounded-2xl bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-zinc-800 transition"
+>
+  Book Now
+</Link>
+
           </div>
         </div>
       </div>
