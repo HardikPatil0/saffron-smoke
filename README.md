@@ -1,7 +1,18 @@
-# Saffron & Smoke — Restaurant Demo Website (React + Tailwind + Sanity)
+# Saffron & Smoke — Restaurant Demo Website
 
-A premium, client-ready restaurant website demo built for freelancing outreach.  
-This project includes a modern UI, fully editable content using Sanity CMS, and a clean light-theme design.
+A premium, client-ready restaurant website demo built for freelancing outreach.
+
+This project includes:
+- Modern responsive UI (light theme)
+- Fully editable content using Sanity CMS
+- Multi-page routing using React Router DOM
+
+---
+
+## 🚀 Live Demo
+- https://saffron-smoke.vercel.app/
+
+---
 
 ## ✨ Features
 
@@ -30,63 +41,62 @@ Restaurant owner can edit everything anytime:
 ---
 
 ## 🧱 Tech Stack
-- **Frontend:** React (Vite), Tailwind CSS, React Router DOM, Lucide Icons  
-- **CMS:** Sanity Studio + Sanity Content Lake  
-- **Deployment:** Vercel (frontend), Sanity hosting (studio)
+- Frontend: React (Vite), Tailwind CSS, React Router DOM, Lucide Icons
+- CMS: Sanity Studio + Sanity Content Lake
+- Deployment: Vercel (frontend), Sanity hosting (studio)
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
+```bash
 saffron-smoke/
-│
-├── README.md
-├── .gitignore
-│
-├── web/                        # Frontend (Vite + React + Tailwind)
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── index.html
-│   ├── public/
-│   │   └── menus/              # (Optional) PDFs if you keep local backup
-│   │
-│   └── src/
-│       ├── App.jsx
-│       ├── main.jsx
-│       ├── index.css
-│       │
-│       ├── assets/
-│       │   └── menu/           # Local images (optional backup)
-│       │       ├── dish1.jpg
-│       │       ├── dish2.jpg
-│       │       └── ...
-│       │
-│       ├── lib/
-│       │   └── sanity.js       # Sanity client + image url builder
-│       │
-│       ├── hooks/
-│       │   └── useSiteSettings.js
-│       │
-│       ├── components/
-│       │   ├── Navbar.jsx
-│       │   └── Footer.jsx
-│       │
-│       └── pages/
-│           ├── Home.jsx
-│           ├── Menu.jsx
-│           ├── Gallery.jsx
-│           ├── About.jsx
-│           └── Contact.jsx
-│
-└── studio/                     # Sanity CMS (Editable Content)
-    ├── package.json
-    ├── sanity.config.js
-    ├── sanity.cli.js
-    │
-    └── schemaTypes/
-        ├── index.js
-        ├── siteSettings.js
-        ├── menuPdf.js
-        ├── menuItem.js
-        ├── galleryItem.js
-        └── aboutPage.js
+├── web/                 # Frontend (Vite + React)
+└── studio/              # Sanity Studio (CMS)
+
+
+⚙️ Installation & Setup (Run Locally)
+1) Clone the repository
+git clone https://github.com/HardikPatil0/saffron-smoke.git
+cd saffron-smoke
+
+2) Run the frontend (web)
+cd web
+npm install
+npm install react-router-dom
+npm run dev
+
+
+Frontend runs at:
+
+http://localhost:5173
+
+Note: If react-router-dom is already in package.json, you can skip:
+npm install react-router-dom
+
+3) Run the Sanity Studio (studio)
+
+Open a new terminal:
+
+cd studio
+npm install
+npm install -g @sanity/cli
+sanity start
+
+
+Sanity Studio runs at:
+
+http://localhost:3333
+
+🔐 Environment Variables (Sanity)
+
+Create a .env file inside the web/ folder:
+
+VITE_SANITY_PROJECT_ID=your_project_id
+VITE_SANITY_DATASET=production
+VITE_SANITY_API_VERSION=2024-01-01
+
+
+Restart the frontend:
+
+npm run dev
